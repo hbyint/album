@@ -230,10 +230,10 @@ $(document).ready(function() {
 			self.currentAlbum.album = {};
 			self.currentAlbum.album.title 	= $('input[name=albumTitle]').val();
 			self.currentAlbum.album.artist 	= $('input[name=albumArtist]').val();
-			self.currentAlbum.album.img			= $('input[name=albumImg]').val();
-			self.currentAlbum.album.genre		= $('input[name=albumGenre]').val();
-			self.currentAlbum.album.info 		= $('input[name=albumInfo]').val();
-			self.currentAlbum.album.publish	=	$('input[name=albumPublish]').val();
+			self.currentAlbum.album.img		= $('input[name=albumImg]').val();
+			self.currentAlbum.album.genre	= $('input[name=albumGenre]').val();
+			self.currentAlbum.album.info 	= $('input[name=albumInfo]').val();
+			self.currentAlbum.album.publish	= $('input[name=albumPublish]').val();
 
 			self.saveAlbum();
 
@@ -347,14 +347,14 @@ $(document).ready(function() {
 			var song = {};
 
 			if ($(row).hasClass('formRow')) {
-				song.no 			= $(row).find('input[name=songNo]').val();
+				song.no 		= $(row).find('input[name=songNo]').val();
 				song.title 		= $(row).find('input[name=songTitle]').val();
-				song.playTime = $(row).find('input[name=songPlayTime]').val();
+				song.playTime 	= $(row).find('input[name=songPlayTime]').val();
 				song.artist 	= $(row).find('input[name=songArtist]').val();
 			} else {
-				song.no 			= $(row).find('td').eq(0).text();
+				song.no 		= $(row).find('td').eq(0).text();
 				song.title 		= $(row).find('td').eq(1).text();
-				song.playTime = $(row).find('td').eq(2).text();
+				song.playTime 	= $(row).find('td').eq(2).text();
 				song.artist 	= $(row).find('td').eq(3).text();
 			}
 			return song;
