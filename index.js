@@ -32,8 +32,9 @@ $(document).ready(function() {
 					$('#infoForm .form-control').val('');	// input 엘리먼트 값 초기화
 
 					$('#infoArea').hide();					// 앨범 정보 표시 영역 감추기
-					$('#infoForm').show();					// 앨범 입력 폼 표시	
+					$('#infoForm').show();					// 앨범 입력 폼 표시
 					$('div[name=albumManager] .btn').hide();
+					$('button[name=savAlbum]').hide();
 
 					self.deleteSongAll();					// 오른쪽 노래목록 초기화
 				} else {
@@ -395,7 +396,9 @@ $(document).ready(function() {
 			$('#songList tr.formRow').each(function (n, row) {
 				var song = self.getDataFromRow(row);
 				if ($(row).hasClass('newSong')) {		// 추가일 때
-					self.currentAlbum.songs = [];
+					if (typeof self.currentAlbum.songs === 'undefined') {
+						self.currentAlbum.songs = [];
+					}
 					self.insertSong(song);
 					$(row).removeClass('newSong');
 				} else {								// 수정일 때
