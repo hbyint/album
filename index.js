@@ -90,7 +90,7 @@ $(document).ready(function() {
 				// 앨범 저장 후 앨범 정보를 표시함
 				$('#infoForm').hide();
 				$('#infoArea').show();
-				self.selectAlbum();
+				self.selectAlbum(self.dataSource.length-1);
 				return false;
 			});
 
