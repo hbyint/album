@@ -68,8 +68,8 @@ $(document).ready(function() {
 				// 폼과 버튼 처리
 				$('#infoArea').hide();
 				$('#infoForm').show();
-				$('button[name=regAlbum').hide();
-				$('button[name=savAlbum').show();
+				$('button[name=regAlbum]').hide();
+				$('button[name=savAlbum]').show();
 
 				// 현재 앨범에서 값을 가져와서 폼에 셋팅함
 				var album = self.currentAlbum.album;
@@ -83,7 +83,7 @@ $(document).ready(function() {
 			});
 
 			// 앨범 저장 버튼 처리
-			$('button[name=savAlbum').click(function(e) {
+			$('button[name=savAlbum]').click(function(e) {
 				self.updateAlbum();
 
 				// 앨범 저장 후 앨범 정보를 표시함
@@ -94,7 +94,7 @@ $(document).ready(function() {
 			});
 
 			// 앨범 삭제 버튼 처리
-			$('a[name=delAlbum').click(function() {
+			$('a[name=delAlbum]').click(function() {
 				self.deleteAlbum(self.currentAlbum);
 
 				// 현재 앨범 삭제 후 앨범 정보 및 화면 초기화
